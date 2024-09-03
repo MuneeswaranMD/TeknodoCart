@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEKNODO</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/online-shopping.png">
+    <script src="./script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+<body onload="loadSearchData()">
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+     <div class="container-fluid">
+       <button class="btn btn-outline-warning" onclick="openNav()"  id="main">&#9776;</button>
+        <a class="navbar-brand" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;TEKNODO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                 <ul class="navbar-nav me-auto">
+                 
+                    <li class="nav-item btn btn-outline-deafult text-white">
+                        <a class="nav-link" href="./index.html">Home</a></li>
+                   
+                     <li class="nav-item btn btn-outline-deafult text-white">
+                       <a class="nav-link" href="./product.html">Product</a>
+                      </li>
+                     <li class="nav-item btn btn-outline-deafult text-white input-group" >
+                       <a class="nav-link location_on" href="javascript:void(0)" style="font-size: smaller;">Update your<br> Address</a>
+                      </li>
+                  
+                    <li class="nav-item mt-2 ml-4">
+                         <div class="dropdown">
+                          <a class="btn btn-outline-deafult dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shopping
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./cat.html">Mobile Phone</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Laptop</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Watch</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">TV</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Mac Book</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Mobie Case</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Air Buds</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Alexa</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Mouse</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Pendrive</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Camera</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Iphone</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">Mobile Equipment</a></li>
+                            <li><a class="dropdown-item" href="./cat.html">See More....</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item btn btn-outline-deafult text-white mt-2">  
+                      <h4><a class="btn btn-outline-deafult  text-white badge bg-warning" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                         New Release
+                      </a></h4>
+                      
+                  </ul>
+                <div class="">
+                  <button class="btn btn-outline-warning" style="margin-right: 15px;"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa fa-user  " style="padding: 10px;" ></i>Login</button>
+                  <a href="#" class=" log  btn btn-outline-warning"><i class="fa fa-cart-plus  " style="padding: 10px;"></i>Card</a>
+                </div>
+              </div>
+      </div>
+ </nav>
+
+  <div id="mySidebar" class="sidebar">
+    <h2 class="text-white"style="padding:20px;background-color:#091225;">
+    <img src="./img/user-interface.png"  class="img-fluid " width="50px" height="50px">&nbsp;&nbsp;&nbsp;Hello Sign In
+    </h2>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+    <li>  <a href="./cat.html">Brand</a></li>
+    <li>  <a href="./cat.html">New Release<span class="badge bg-warning">new</span></a></li>
+    <li>  <a href="./cat.html">Tablet</a></li>
+    <li><a href="./cat.html"> Mobile Phone</a></li>
+    <li>  <a href="./cat.html">Laptop</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Operating System (OS)</h4>
+    <li>  <a href="./cat.html">Android</a></li>
+    <li>  <a href="./cat.html">ios</a></li>
+    <li><a href="./cat.html">Windows</a></li>
+    <li>  <a href="./cat.html">Mac</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Brand</h4>
+    <li>  <a href="./cat.html">Realme</a></li>
+    <li><a href="./cat.html">Redmi</a></li>
+    <li>  <a href="./cat.html">Google Pixel</a></li>
+    <li>  <a href="./cat.html">iphone Series</a></li>
+    <li>  <a href="./cat.html">See More...</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Help & Setting</h4>
+    <li><a href="">Help</a></li>
+    <li>  <a href="#">Setting</a></li>
+    <li>  <a href="#">Dashboard</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li>  <a href="#">My Order</a></li>
+    <li>  <a href="#"> Tracking Order</a></li>
+    <li>  <a href="#">Term & Policy</a></li>
+    <li>  <a href="#">Logout</a></li>
+    
+    </ul>
+
+  </div>
+
+
+  
+<!--OFFCANVAS-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Login Page</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-grid gap-2 col-6 mx-auto" style="margin-left: 50px; align-items: center;">
+        <a href="./login.html" class="btn btn-warning ">Sign In</a>
+        <p class="text-center">new customer?<a href="">Sign up</a></p>
+      </div>
+      <div>
+      </div>
+      </div>
+    </div>
+
+<div class="container-well">
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+         <!-- The slideshow/carousel -->
+     <div class="carousel-inner">
+             <div class="carousel-item active">
+                <img src="./img/4387331.jpg" alt="Los Angeles" height="600px"  class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/6985.jpg" alt="Chicago" class="d-block w-100" height="600px">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/5092393.jpg" alt="New York" class="d-block w-100" height="600px">
+              </div>
+       </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" style="display:none;">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+</div> 
+</div>
+
+
+          <!--Searchbar-->
+          <div class="container">
+            <div class="row height d-flex justify-content-center align-items-center">
+                 <div class="col-md-8">
+                     <div class="search">
+                         <i class="fa fa-search"></i>
+                         <input type="text" class="form-control"id="searchbar" onkeyup="search()" placeholder="Search.........">
+                         <button class="btn btn-primary">Search</button>
+                     </div>
+                 </div>
+              </div>
+         </div>
+         
+         <ul id="list">
+          <li>  <a href="./cat.html"class="listItem">Brand</a></li>
+          <li>  <a href="./cat.html"class="listItem">New Release</a></li>
+          <li>  <a href="./cat.html"class="listItem">Tablet</a></li>
+          <li><a href="./cat.html"class="listItem"> Mobile Phone</a></li>
+          <li>  <a href="./cat.html"class="listItem">Android</a></li>
+          <li>  <a href="./cat.html"class="listItem">ios</a></li>
+          <li><a href="./cat.html"class="listItem">Windows</a></li>
+          <li>  <a href="./cat.html"class="listItem">Mac</a></li>
+          <li>  <a href="./cat.html"class="listItem">Realme</a></li>
+          <li><a href="./cat.html"class="listItem">Redmi</a></li>
+          <li>  <a href="./cat.html"class="listItem">Google Pixel</a></li>
+          <li>  <a href="./cat.html"class="listItem">iphone Series</a></li>
+        </ul>
+        <div id=""></div>
+
+<!--1-->
+<div>
+<a href="./cat.html" class=" see  btn btn-outline-primary"><i class="fa fa-cart-plus  " style="padding: 10px;top: 50px;"></i>see more</a>
+<h2 class="text-dark"style="padding:20px;margin-left:10px;">Mobile & Computer</h2>
+<div class="container-well scrollmenu" >
+  <div class="card1">
+   <a href="./list.html"> <img src="./img/3215461.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>iphone Series</b></h4>
+      <p class="btn btn-danger">Up to 70% off</p>
+      
+        <div class="content">
+            <div class="ratings">
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+                <span class="product-rating">4.6</span><span>/5</span>
+                <div class="rating-text">
+                    <span>46 ratings & 15 reviews</span>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/11873.jpg "alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Smart Watch</b></h4>
+      <p class="btn btn-danger">Up to 50% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html"> <img src="./img/OPTY430.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Laptop</b></h4>
+      <p class="btn btn-danger">Up to 60% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/m502t0010_06jun22_smart_watch_02.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Kid's Watch</b></h4>
+      <p class="btn btn-danger">Up to 70% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+<!--2-->
+
+  <h2 class="text-dark"style="padding:20px;margin-left:10px;">Digital Content</h2>
+  <a href="./cat.html" class=" see  btn btn-outline-primary"><i class="fa fa-cart-plus  " style="padding: 10px;top: 50px;"></i>see more</a>
+<div class="container-well scrollmenu" >
+  <div class="card1">
+    <a href="./list.html">  <img src="./img/alexa.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Alexa</b></h4>
+      <p><h6>Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue</h6></p>
+      <p class="btn btn-danger">Up to 70% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/fire TV.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Fire TV</b></h4>
+      <p>Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32R8-FVIN (Black)</p>
+      <p class="btn btn-danger">Up to 70% off</p>
+
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/buds.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>AirPods Pro (2nd Generation) ​​​​​​​</b></h4>
+      <p></p>
+      <p class="btn btn-danger">Up to 70% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">   <img src="./img/samsung.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>samsung</b></h4>
+      <p>Galaxy Tab S9 27.81 cm (11 inch) Dynamic AMOLED 2X Display, RAM 8 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi Tablet, Beige</p>
+      <p class="btn btn-danger">Up to 70% off</p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!--3-->
+<a href="./cat.html" class=" see  btn btn-outline-primary"><i class="fa fa-cart-plus  " style="padding: 10px;top: 50px;"></i>see more</a>
+<h2 class="text-dark"style="padding:20px;margin-left:10px;">Iphone Series</h2>
+<div class="container-well scrollmenu" >
+  <div class="card1">
+    <a href="./list.html">  <img src="./img/apple-iphone-13-pro-max-01.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Apple</b></h4>
+      <p>iPhone 13 (128GB) - Blue </p>
+      <p><h2> ₹52,999</h2>M.R.P.: <span style="text-decoration: line-through;">₹59,900</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/apple-iphone-14-pro-3.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Apple</b></h4>
+      <p>iPhone 14 Pro (256 GB) - White</p>
+      <p><h2>₹1,22,990 </h2>M.R.P: <span style="text-decoration: line-through;">₹1,39,900</span> </p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html"> <img src="./img/apple-iphone-15-pro-max-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Apple</b></h4>
+      <p>iPhone 15 Pro Max (256 GB) </p>
+      <p><h1>₹1,56,990</h1> M.R.P: <span style="text-decoration: line-through;">₹1,59,900 </span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/apple-iphone-14-pro-max-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Apple</b></h4>
+      <p>iPhone 15 Pro (256 GB) </p>
+      <p><h2>₹1,41,900 </h2>M.R.P: <span style="text-decoration: line-through;">₹1,44,900</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star" ></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+  <!--4-->
+  <br><br>
+  <h2 class="text-dark"style="padding:20px;margin-left:10px;">Today's Deal</h2>
+<div class="container-well">
+  <ul class="cards">
+    <li class="card">
+      <div class="img">
+        <h3>Redmi Series</h3>        
+      <a href=""> <img src="./img/xiaomi-redmi-12-1.jpg" width="150px" height="150px"></a>
+      <a href="">   <img src="./img/xiaomi-redmi-note-12-pro-4g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note-12s-11.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note10-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Poco Series</h3>       
+        <a href=""> <img src="./img/xiaomi-poco-f5-2.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x5-pro-5g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-13t-1.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x3-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Smart Watch</h3>
+        <a href=""> <img src="./img/watch1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/watch3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Air Buds</h3>
+      <div class="img">
+        <a href=""> <img src="./img/buds1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/buds2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/buds3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/ds4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3 > Laptop</h3>
+      <div class="img">
+        <a href=""> <img src="./img/lap1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/lap3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Mouse</h3>
+      <div class="img">
+        <a href=""> <img src="./img/download.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse1.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse2.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse3.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Pendrive</h3>
+      <div class="img">
+        <a href=""> <img src="./img/pen1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/pen3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>cables</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/cable1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/cable3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Keyboard</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/key1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/key3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Smart TV</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/tv1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv2'.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/tv3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      
+  </ul>
+</div>
+<!--3--><!--3--><!--3--><!--3--><!--3--><!--3-->
+  <h2 class="text-dark"style="padding:20px;margin-left:10px;">Realme Series</h2>
+  <a href="./cat.html" class=" see  btn btn-outline-primary"><i class="fa fa-cart-plus  " style="padding: 10px;top: 50px;"></i>see more</a>
+
+<div class="container-well scrollmenu" >
+  <div class="card1">
+    <a href="./list.html">  <img src="./img/realme-9i-2.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Realme 9i</b></h4>
+      <p>realme 9i (Prism Black, 4GB RAM, 128GB Storage) </p>
+      <p><h2>₹13,999 </h2> M.R.P: <span style="text-decoration: line-through;">₹16,999</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/realme-9i-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Realme 9i</b></h4>
+      <p>realme 9i (Prism Blue, 4GB RAM, 128GB Storage)</p>
+      <p><h2>₹13,999 </h2> M.R.P: <span style="text-decoration: line-through;">₹16,999</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/realme-11-pro-plus-2.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>realme 11 Pro 5G </b></h4>
+      <p>(Sunrise Beige, 8GB RAM, 256GB Storage) | 120 Hz Curved Display | 100MP Prolight Camera | 7050 5G Dimensity | 67W SUPERVOOC | 12GB Dynamic RAM | Premier Vegan Leather</p>
+      <p><h2>₹22,590 </h2> New Price:  <span style="text-decoration: line-through;">₹23,894</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="./list.html">  <img src="./img/realme-gt5-pro-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>realme GT 5G </b></h4>
+      <p>realme GT 5G (8GB RAM, 128GB Storage)</p>
+      <p><h2>₹25,240 </h2> New Price:  <span style="text-decoration: line-through;">₹40,894</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+<br><br>
+<!--3--><!--3--><!--3--><!--3--><!--3--><!--3-->
+<h2 class="text-dark"style="padding:20px;margin-left:10px;">Best Offer's</h2><br>
+<div class="container-well">
+  <ul class="cards">
+    <li class="card">
+      <div class="img">
+        <h3>Redmi Series</h3>        
+      <a href=""> <img src="./img/xiaomi-redmi-12-1.jpg" width="150px" height="150px"></a>
+      <a href="">   <img src="./img/xiaomi-redmi-note-12-pro-4g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note-12s-11.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note10-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Poco Series</h3>       
+        <a href=""> <img src="./img/xiaomi-poco-f5-2.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x5-pro-5g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-13t-1.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x3-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Smart Watch</h3>
+        <a href=""> <img src="./img/watch1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/watch3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Air Buds</h3>
+      <div class="img">
+        <a href=""> <img src="./img/buds1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/buds2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/buds3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/ds4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3 > Laptop</h3>
+      <div class="img">
+        <a href=""> <img src="./img/lap1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/lap3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Mouse</h3>
+      <div class="img">
+        <a href=""> <img src="./img/download.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse1.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse2.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse3.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Pendrive</h3>
+      <div class="img">
+        <a href=""> <img src="./img/pen1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/pen3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>cables</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/cable1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/cable3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Keyboard</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/key1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/key3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Smart TV</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/tv1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv2'.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/tv3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      
+  </ul>
+</div>
+
+
+
+
+<footer class="new_footer_5area bg-dark">
+  <div class="new_footer_top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                      <p>Don’t miss any updates of our new templates and extensions.!</p>
+                      <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                          <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                          <button class="btn btn_get btn_get_two text-primary" type="submit">Subscribe</button>
+                          <p class="mchimp-errmessage" style="display: none;"></p>
+                          <p class="mchimp-sucmessage" style="display: none;"></p>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Android App</a></li>
+                          <li><a href="#">ios App</a></li>
+                          <li><a href="#">Desktop</a></li>
+                          <li><a href="#">Projects</a></li>
+                          <li><a href="#">My tasks</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft text-white" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">Term &amp; conditions</a></li>
+                          <li><a href="#">Reporting</a></li>
+                          <li><a href="#">Documentation</a></li>
+                          <li><a href="#">Support Policy</a></li>
+                          <li><a href="#">Privacy</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                      <div class="f_social_icon">
+                          <a href="#" class="fab fa-facebook"></a>
+                          <a href="#" class="fab fa-twitter"></a>
+                          <a href="#" class="fab fa-linkedin"></a>
+                          <a href="#" class="fab fa-pinterest"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>

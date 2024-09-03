@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEKNODO</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../img/online-shopping.png">
+    <script src="../script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <div class="container-fluid">
+       <button class="btn btn-outline-warning" onclick="openNav()"  id="main">&#9776;</button>
+        <a class="navbar-brand" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;TEKNODO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                 <ul class="navbar-nav me-auto">
+                 
+                  <li class="nav-item btn btn-outline-deafult text-white">
+                    <a class="nav-link" href="./index.html">Home</a></li>
+               
+                 <li class="nav-item btn btn-outline-deafult text-white">
+                   <a class="nav-link" href="./product.html">Product</a>
+                      </li>
+                     <li class="nav-item btn btn-outline-deafult text-white input-group" >
+                       <a class="nav-link location_on" href="javascript:void(0)" style="font-size: smaller;">Update your<br> Address</a>
+                      </li>
+                  
+                    <li class="nav-item mt-2 ml-4">
+                         <div class="dropdown">
+                          <a class="btn btn-outline-deafult dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shopping
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                            <li><a class="dropdown-item" href="#">Laptop</a></li>
+                            <li><a class="dropdown-item" href="#">Watch</a></li>
+                            <li><a class="dropdown-item" href="#">TV</a></li>
+                            <li><a class="dropdown-item" href="#">Mac Book</a></li>
+                            <li><a class="dropdown-item" href="#">Mobie Case</a></li>
+                            <li><a class="dropdown-item" href="#">Air Buds</a></li>
+                            <li><a class="dropdown-item" href="#">Alexa</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse</a></li>
+                            <li><a class="dropdown-item" href="#">Pendrive</a></li>
+                            <li><a class="dropdown-item" href="#">Camera</a></li>
+                            <li><a class="dropdown-item" href="#">Iphone</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile Equipment</a></li>
+                            <li><a class="dropdown-item" href="#">See More....</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item btn btn-outline-deafult text-white mt-2">  
+                      <h4><a class="btn btn-outline-deafult  text-white badge bg-warning" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                         New Release
+                      </a></h4></li>
+                  </ul>
+                <div class="d-block">
+                  <button class="btn btn-outline-warning" style="margin-right: 15px;"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa fa-user  " style="padding: 10px;"></i>Login</button>
+                  <a href="#" class=" log  btn btn-outline-warning"><i class="fa fa-cart-plus  " style="padding: 10px;"></i>Card</a>
+                </div>
+              </div>
+      </div>
+ </nav>
+  <div id="mySidebar" class="sidebar">
+    <h2 class="text-white"style="padding:20px;background-color:#091225;">
+    <img src="./img/user-interface.png"  class="img-fluid " width="50px" height="50px">&nbsp;&nbsp;&nbsp;Hello Sign In
+    </h2>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+    <li>  <a href="#">Brand</a></li>
+    <li>  <a href="#">New Release<span class="badge bg-warning">new</span></a></li>
+    <li>  <a href="#">Tablet</a></li>
+    <li><a href="#"> Mobile Phone</a></li>
+    <li>  <a href="#">Laptop</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Operating System (OS)</h4>
+    <li>  <a href="#">Android</a></li>
+    <li>  <a href="#">ios</a></li>
+    <li><a href="#">Windows</a></li>
+    <li>  <a href="#">Mac</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Brand</h4>
+    <li>  <a href="#">Realme</a></li>
+    <li><a href="#">Redmi</a></li>
+    <li>  <a href="#">Google Pixel</a></li>
+    <li>  <a href="#">iphone Series</a></li>
+    <li>  <a href="#">See More...</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Help & Setting</h4>
+    <li><a href="#">Help</a></li>
+    <li>  <a href="#">Setting</a></li>
+    <li>  <a href="#">Dashboard</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li>  <a href="#">My Order</a></li>
+    <li>  <a href="#"> Tracking Order</a></li>
+    <li>  <a href="#">Term & Policy</a></li>
+    <li>  <a href="#">Logout</a></li>
+    </ul>
+  </div>  
+<!--OFFCANVAS-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Login Page</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-grid gap-2 col-6 mx-auto" style="margin-left: 50px; align-items: center;">
+        <a href="#" class="btn btn-warning ">Sign In</a>
+        <p class="text-center">new customer?<a href="">Sign up</a></p>
+      </div>
+      <div>
+      </div>
+      </div>
+    </div>
+ <div class="container-well gaget">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Electronics<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mobil & Aplication</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Laptop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Smart watch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Headphone</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Smart Tv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bluetooth Devices</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bluetooth Devices</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav></div>
+      <a href="../index.html" style="text-decoration: underline; color: black;"> > Back to result</a>
+      <div class="container-well">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <img src="./img/apple-iphone-14-pro-max-1.jpg" alt="iphone 13" class="img-fluid mx-auto d-block mt-5"width="400px" height="0">
+                <img src="./img/apple-iphone-14-pro-max-1.jpg" alt="iphone 13" class="img-fluid mx-auto d-block mt-5"width="400px" height="0">
+                <img src="./img/apple-iphone-14-pro-max-1.jpg" alt="iphone 13" class="img-fluid mx-auto d-block mt-5"width="400px" height="0">
+            </div>
+            <div class="col-lg-6 scroll5" >
+                
+               <h1>Apple iPhone 15 Pro (128 GB) - Natural Titanium</h1>
+               <div class="row">
+                <div class="col-md-6">
+               <a href="https://www.apple.com/in/store" style="text-decoration: none;"> Vist the Apple Store</a><br>
+               <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <p ><h6 class="text-primary">5 Rating|10 answers</h6></p>
+              <h6>50+bought in past month</h6>
+              <hr style=" border: 2px solid;"> 
+             <p>(-2% )<h1>₹1,31,990</h1></p>
+               <p> M.R.P.:<span style="text-decoration: line-through;"> ₹1,34,900.00</span></p>
+                Inclusive of all taxes
+               <p> EMI starts at ₹6,400. <span class="text-secondary">No Cost EMI available </span><a href=""style="text-decoration:none;">EMI Option
+            </a>
+            <hr style=" border: 2px solid;">  </p>
+            <p><b>Color</b>:Natural Titanium</p>
+           <a href=""><img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+           <a href=""> <img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+           <a href=""> <img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+          <hr style=" border: 2px solid;"> </p>
+            </div>
+            <div class="col-md-6" >
+                <div class="card2">
+                    <div class="container1">
+                        <h6><b>Without Exchange Offer</b></h6>
+                        <p style="color: brown;">Up to 1,13,990&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="radio"> </p>
+                        <p>FREE delivery <span style="font-weight: bold;"> Thursday, 14 December</span> <a href="">Details</a></p>   
+                        <p>Or fastest delivery <span style="font-weight: bold;"> Tomorrow, 13 December</span>. Order within 7 hrs 22 mins.  <a href="">Details</a></p>
+                        <p><span style="color: green;">In stock</span><br>Sold by Appario Retail Private Ltd and Fulfilled by TEKNODO.</p>
+                        <a href="#" class="btn btn-warning d-grid gap-2 col-6 mx-auto">Add To Card</a><br>
+                        <a href="#" class="btn btn-warning d-grid gap-2 col-6 mx-auto" style="background-color: rgb(234, 231, 25);">Buy</a>
+                        <p> <i class="material-icons">&#xe63f;</i> Secure transaction</p>
+                        <input type="radio" name="Add More Gifts" id="">
+                        <label for="">Add gift options</label>
+                        <br><br>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <p class="text-dark"><img src="./img/offer.png" alt="" width="100px" height="100px"><b>Offer </b></p>
+        <div class="card3">
+          <div class="container">
+            <h6><b>No Cost EMI</b></h6>
+            <p> Upto ₹7,069.06 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹7,069.06 EMI interest savings on Amazon Pay ICICI…</p>
+            <a href="" style="text-decoration: none;">  </a>
+              <div class="offcanvas offcanvas-end" id="demo">
+                <div class="offcanvas-header">
+                  <h1 class="offcanvas-title">Heading</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>Some text lorem ipsum.</p>
+                  <p>Some text lorem ipsum.</p>
+                  <p>Some text lorem ipsum.</p>
+                  <button class="btn btn-secondary" type="button">A Button</button>
+                </div>
+              </div>
+                <button class="btn text-primary " type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="border-style: none; ">
+                  1 offer
+                </button>
+            <br>
+          </div>
+        </div>
+        <div class="card3">
+          <div class="container">
+            <h6><b>Bank Offer</b></h6>
+            <p> Upto ₹250.00 discount on Citi Credit CardsUpto ₹250.00 discount on Citi Credit Cards</p>
+            <a href="" style="text-decoration: none;"></a>
+            <div class="offcanvas offcanvas-end" id="demo">
+              <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Heading</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>Some text lorem ipsum.</p>
+                <p>Some text lorem ipsum.</p>
+                <p>Some text lorem ipsum.</p>
+                <button class="btn btn-secondary" type="button">A Button</button>
+              </div>
+            </div>
+              <button class="btn text-primary " type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="border-style: none; ">
+                2 offer
+              </button>
+            <br>
+          </div>
+        </div> <br><br><br>
+        <div class="container text-center">
+        <p><b>Size:</b> 256</p>
+        <a href=""><img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+        <a href=""> <img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+        <a href=""> <img src="./img/Screenshot 2023-12-12 173910.png" class="img-fluid rounded " style="border: 1px solid;" alt="" width="100px" ></a> 
+      </div>
+        <hr style=" border: 2px solid;"> 
+        <div class="container ">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Brand   </th>
+                <td> Apple</td>
+              </tr>
+              <tr>
+                <th scope="row">Model Name  </th>
+                <td> iPhone 15 Pro Max</td>
+              </tr>
+              <tr>
+                <th scope="row">Network Service Provider </th>
+                <td> Unlocked for All Carriers</td>
+              </tr>
+              <tr>
+                <th scope="row">Operating System</th>
+                <td> iOS </td>
+              </tr>
+              <tr>
+                <th scope="row">Cellular Technology</th>
+                <td>5G </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr style=" border: 2px solid;"> 
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Technical Details</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row"> OS </th>
+            <td>iOS</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">RAM</th>
+            <td>8 GB</td>            
+          </tr>
+          <tr>
+            <th scope="row">Product Dimensions</th>
+            <td>0.82 x 7.67 x 15.99 cm; 221 Grams</td>
+          </tr>
+          <tr>
+            <th scope="row">Batteries</th>
+            <td>1 Lithium Ion batteries required. (included)</td>
+          </tr>
+          <tr>
+            <th scope="row">Item model number</th>
+            <td>MU793HN/A</td>
+          </tr>
+          <tr>
+            <th scope="row">Wireless communication technologies</th>
+            <td>Bluetooth, Wi-Fi</td>
+          </tr>
+          <tr>
+            <th scope="row">Connectivity technologies</th>
+            <td>Wi‑Fi 6E (802.11ax) with 2x2 MIMO;Bluetooth 5.3</td>
+          </tr>
+          <tr>
+            <th scope="row">Special features</th>
+            <td>Camera</td>
+          </tr>
+          <tr>
+            <th scope="row">Other display features</th>
+            <td>Premium Consumer Electronics Brands</td>
+          </tr>
+          <tr>
+            <th scope="row">Device interface - primary</th>
+            <td>Buttons</td>
+          </tr>
+          <tr>
+            <th scope="row">Other camera features</th>
+            <td>Front</td>
+          </tr>
+          <tr>
+            <th scope="row">Form factor</th>
+            <td>Bar</td>
+          </tr>
+          <tr>
+            <th scope="row">Colour</th>
+            <td>Natural Titanium</td>
+          </tr>
+          <tr>
+            <th scope="row">Battery Power Rating</th>
+            <td>0.02 Kilovolts</td>
+          </tr>
+          <tr>
+            <th scope="row">Whats in the box</th>
+            <td>	iPhone 15 Pro Max 1N, USB-C Charge Cable</td>
+          </tr>
+          <tr>
+            <th scope="row">Manufacturer</th>
+            <td>Apple</td>
+          </tr>
+          <tr>
+            <th scope="row">Country of Origin</th>
+            <td>China</td>
+          </tr>
+          <tr>
+            <th scope="row">Item Weight</th>
+            <td>221 g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h4>Additional Information</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">ASIN</th>
+            <td>B0CHX68YG9</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">Customer Reviews</th>
+            <td>
+              <div class="ratings">
+                <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star checked"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </div>
+             <p>4.4 rating</p>
+          </td>            
+          </tr>
+          <tr>
+            <th scope="row">Best Sellers Rank</th>
+            <td>#2,560 in Electronics <span class="text-primary">(See Top 100 in Electronics)</span>
+              #204 in<span class="text-primary">Smartphones </span> </td>
+          </tr>
+          <tr>
+            <th scope="row">Date First Available</th>
+            <td>27 September 2023</td>
+          </tr>
+          <tr>
+            <th scope="row">Manufacturer</th>
+            <td><p>Apple, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001</p></td>
+          </tr>
+          <tr>
+            <th scope="row">Packer</th>
+            <td>Not Applicable for Apple (Always)</td>
+          </tr>
+          <tr>
+            <th scope="row">Importer</th>
+            <td>(If applicable) Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001</td>
+          </tr>
+          <tr>
+            <th scope="row">Item Dimensions LxWxH</th>
+            <td>8 x 77 x 160 Millimeters</td>
+          </tr>
+          <tr>
+            <th scope="row">Net Quantity</th>
+            <td>	2 Count</td>
+          </tr>
+          <tr>
+            <th scope="row">Generic Name</th>
+            <td>iPhone 15 Pro Max</td>
+          </tr>
+        </tbody>
+      </table><br><br><br>
+      <h5>FeedBack</h5>
+      <p>Would you like  <span class="text-danger"></span>
+        <button type="button" class="btn text-danger" data-bs-toggle="modal" data-bs-target="#myModal" style="border-style: none; ">
+          to tell us about a lower price ?
+        </button>
+      </div>
+      
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Tell Us About a Lower Price</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              Please <a href="">sign </a>in to provide feedback.
+            </div>      
+          </div>
+        </div></p>
+    </div>
+    </div>
+    </div>
+
+
+    
+  <!--4-->
+  <br><br>
+  <h2 class="text-dark"style="padding:20px;margin-left:10px;">Frequently Search</h2>
+<div class="container-well">
+  <ul class="cards">
+    <li class="card">
+      <div class="img">
+        <h3>Redmi Series</h3>        
+      <a href=""> <img src="./img/xiaomi-redmi-12-1.jpg" width="150px" height="150px"></a>
+      <a href="">   <img src="./img/xiaomi-redmi-note-12-pro-4g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note-12s-11.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-redmi-note10-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Poco Series</h3>       
+        <a href=""> <img src="./img/xiaomi-poco-f5-2.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x5-pro-5g-1.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-13t-1.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/xiaomi-poco-x3-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img">
+        <h3>Smart Watch</h3>
+        <a href=""> <img src="./img/watch1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/watch3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/watch4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Air Buds</h3>
+      <div class="img">
+        <a href=""> <img src="./img/buds1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/buds2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/buds3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/ds4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3 > Laptop</h3>
+      <div class="img">
+        <a href=""> <img src="./img/lap1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/lap3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/lap4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Mouse</h3>
+      <div class="img">
+        <a href=""> <img src="./img/download.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse1.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse2.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/mouse3.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Pendrive</h3>
+      <div class="img">
+        <a href=""> <img src="./img/pen1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/pen3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/pen4.jpg" href="#"width="170px" height="150px"></a> 
+         
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>cables</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/cable1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/cable3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/cable4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Keyboard</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/key1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key2.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/key3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/key4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      <div class="card-link-wrapper">
+        <a href="" class="card-link">Learn More</a>
+      </div>
+    </li>
+    <li class="card">
+      <h3>Smart TV</h3>
+      <div class="img">
+        
+        <a href=""> <img src="./img/tv1.jpg" width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv2'.jpg" href="#"width="170px" height="150px"></a> 
+      <a href="">   <img src="./img/tv3.jpg" href="#"width="150px" height="150px"></a> 
+      <a href="">   <img src="./img/tv4.jpg" href="#"width="170px" height="150px"></a> 
+       
+      </div>
+      
+  </ul>
+</div>
+<!--3--><!--3--><!--3--><!--3--><!--3--><!--3-->
+  <h2 class="text-dark"style="padding:20px;margin-left:10px;">Realme Series</h2>
+  <a href="#" class=" see  btn btn-outline-primary"><i class="fa fa-cart-plus  " style="padding: 10px;top: 50px;"></i>see more</a>
+
+<div class="container-well scrollmenu" >
+  <div class="card1">
+    <a href="">  <img src="./img/realme-9i-2.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Realme 9i</b></h4>
+      <p>realme 9i (Prism Black, 4GB RAM, 128GB Storage) </p>
+      <p><h2>₹13,999 </h2> M.R.P: <span style="text-decoration: line-through;">₹16,999</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="">  <img src="./img/realme-9i-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>Realme 9i</b></h4>
+      <p>realme 9i (Prism Blue, 4GB RAM, 128GB Storage)</p>
+      <p><h2>₹13,999 </h2> M.R.P: <span style="text-decoration: line-through;">₹16,999</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="">  <img src="./img/realme-11-pro-plus-2.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>realme 11 Pro 5G </b></h4>
+      <p>(Sunrise Beige, 8GB RAM, 256GB Storage) | 120 Hz Curved Display | 100MP Prolight Camera | 7050 5G Dimensity | 67W SUPERVOOC | 12GB Dynamic RAM | Premier Vegan Leather</p>
+      <p><h2>₹22,590 </h2> New Price:  <span style="text-decoration: line-through;">₹23,894</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div><div class="card1">
+    <a href="">  <img src="./img/realme-gt5-pro-1.jpg" alt="Avatar" style="width:100%"></a>
+    <div class="container1">
+      <h4><b>realme GT 5G </b></h4>
+      <p>realme GT 5G (8GB RAM, 128GB Storage)</p>
+      <p><h2>₹25,240 </h2> New Price:  <span style="text-decoration: line-through;">₹40,894</span></p>
+      <div class="content">
+        <div class="ratings">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+            <span class="product-rating">4.6</span><span>/5</span>
+            <div class="rating-text">
+                <span>46 ratings & 15 reviews</span>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+<br><br>
+ 
+
+
+
+<footer class="new_footer_area bg-dark">
+  <div class="new_footer_top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                      <p>Don’t miss any updates of our new templates and extensions.!</p>
+                      <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                          <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                          <button class="btn btn_get btn_get_two text-primary" type="submit">Subscribe</button>
+                          <p class="mchimp-errmessage" style="display: none;"></p>
+                          <p class="mchimp-sucmessage" style="display: none;"></p>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Android App</a></li>
+                          <li><a href="#">ios App</a></li>
+                          <li><a href="#">Desktop</a></li>
+                          <li><a href="#">Projects</a></li>
+                          <li><a href="#">My tasks</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft text-white" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">Term &amp; conditions</a></li>
+                          <li><a href="#">Reporting</a></li>
+                          <li><a href="#">Documentation</a></li>
+                          <li><a href="#">Support Policy</a></li>
+                          <li><a href="#">Privacy</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                      <div class="f_social_icon">
+                          <a href="#" class="fab fa-facebook"></a>
+                          <a href="#" class="fab fa-twitter"></a>
+                          <a href="#" class="fab fa-linkedin"></a>
+                          <a href="#" class="fab fa-pinterest"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>

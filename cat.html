@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEKNODO</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="icon" href="../img/online-shopping.png">
+    <script src="../script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <div class="container-fluid">
+       <button class="btn btn-outline-warning" onclick="openNav()"  id="main">&#9776;</button>
+        <a class="navbar-brand" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;TEKNODO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                 <ul class="navbar-nav me-auto">
+                 
+                    <li class="nav-item btn btn-outline-deafult text-white">
+                        <a class="nav-link" href="./index.html">Home</a></li>
+                   
+                     <li class="nav-item btn btn-outline-deafult text-white">
+                       <a class="nav-link" href="./product.html">Product</a>
+                      </li>
+                     <li class="nav-item btn btn-outline-deafult text-white input-group" >
+                       <a class="nav-link location_on" href="javascript:void(0)" style="font-size: smaller;">Update your<br> Address</a>
+                      </li>
+                  
+                    <li class="nav-item mt-2 ml-4">
+                         <div class="dropdown">
+                          <a class="btn btn-outline-deafult dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shopping
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                            <li><a class="dropdown-item" href="#">Laptop</a></li>
+                            <li><a class="dropdown-item" href="#">Watch</a></li>
+                            <li><a class="dropdown-item" href="#">TV</a></li>
+                            <li><a class="dropdown-item" href="#">Mac Book</a></li>
+                            <li><a class="dropdown-item" href="#">Mobie Case</a></li>
+                            <li><a class="dropdown-item" href="#">Air Buds</a></li>
+                            <li><a class="dropdown-item" href="#">Alexa</a></li>
+                            <li><a class="dropdown-item" href="#">Mouse</a></li>
+                            <li><a class="dropdown-item" href="#">Pendrive</a></li>
+                            <li><a class="dropdown-item" href="#">Camera</a></li>
+                            <li><a class="dropdown-item" href="#">Iphone</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile Equipment</a></li>
+                            <li><a class="dropdown-item" href="#">See More....</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item btn btn-outline-deafult text-white mt-2">  
+                      <h4><a class="btn btn-outline-deafult  text-white badge bg-warning" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                         New Release
+                      </a></h4>
+                  </ul>
+                <div class="">
+                  <button class="btn btn-outline-warning" style="margin-right: 15px;"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa fa-user  " style="padding: 10px;"></i>Login</button>
+                  <a href="#" class=" log  btn btn-outline-warning"><i class="fa fa-cart-plus  " style="padding: 10px;"></i>Card</a>
+                </div>
+              </div>
+      </div>
+ </nav>
+  <div id="mySidebar" class="sidebar">
+    <h2 class="text-white"style="padding:20px;background-color:#091225;">
+    <img src="../img/user-interface.png"  class="img-fluid " width="50px" height="50px">&nbsp;&nbsp;&nbsp;Hello Sign In
+    </h2>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+    <li>  <a href="#">Brand</a></li>
+    <li>  <a href="#">New Release<span class="badge bg-warning">new</span></a></li>
+    <li>  <a href="#">Tablet</a></li>
+    <li><a href="#"> Mobile Phone</a></li>
+    <li>  <a href="#">Laptop</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Operating System (OS)</h4>
+    <li>  <a href="#">Android</a></li>
+    <li>  <a href="#">ios</a></li>
+    <li><a href="#">Windows</a></li>
+    <li>  <a href="#">Mac</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Brand</h4>
+    <li>  <a href="#">Realme</a></li>
+    <li><a href="#">Redmi</a></li>
+    <li>  <a href="#">Google Pixel</a></li>
+    <li>  <a href="#">iphone Series</a></li>
+    <li>  <a href="#">See More...</a></li>
+    <h4 class="text-white"style="padding:20px;margin-left:10px;">Help & Setting</h4>
+    <li><a href="#">Help</a></li>
+    <li>  <a href="#">Setting</a></li>
+    <li>  <a href="#">Dashboard</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li>  <a href="#">My Order</a></li>
+    <li>  <a href="#"> Tracking Order</a></li>
+    <li>  <a href="#">Term & Policy</a></li>
+    <li>  <a href="#">Logout</a></li>
+    </ul>
+  </div>  
+<!--OFFCANVAS-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Login Page</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-grid gap-2 col-6 mx-auto" style="margin-left: 50px; align-items: center;">
+        <a href="#" class="btn btn-warning ">Sign In</a>
+        <p class="text-center">new customer?<a href="">Sign up</a></p>
+      </div>
+      <div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container-well" style="border: 1px solid;">
+        <p class="mt-2">1-16 over 1,000 of <span class="text-danger"><b>"iphone"</b> </span></p>
+    </div>
+    <div class="container-well">
+        <div class="row">
+            <div class="col-sm-3" style="overflow:hidden; position:unset;z-index: 1;">
+                
+                <div class="container">
+                    <h4>Item Content</h4>    
+                <p>New Release<br>Renewed</p>
+                    <h4>Delivery day</h4>
+                  
+                    <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Get it Today</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Get it by Tomorrow</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Get it by 2 Days</a></label>
+                </form><br>
+                <h5>Category</h5>
+                <p>Smartphones & Basic Mobile <br>Smartphones</p>
+                <h5>Customer Reviews</h5>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ; text-decoration: none; color: black;">&, up</a>
+                </div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;text-decoration: none; color: black;">&, up</a>
+                </div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;text-decoration: none; color: black;">&, up</a>
+                </div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;text-decoration: none; color: black;">&, up</a>
+                </div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;text-decoration: none; color: black;">&, up</a>
+                </div><br>
+                   <h5>Brand</h5>
+                   <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">iOS</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Realme</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Redmi</a></label>
+                </form><br>
+                <h6>Price</h6>
+                <p><a href="" style="text-decoration: none; color: black;">Under ₹1,000</a><br>
+                <a href="" style="text-decoration: none; color: black;">₹5,000 - ₹10,000</a><br>
+                <a href="" style="text-decoration: none; color: black;">₹5,000 - ₹10,000</a><br>
+                <a href="" style="text-decoration: none; color: black;">Over ₹20,000</a></p>
+                <form action="">
+                    <input type="text" id="min" placeholder="₹ MIN"><br>-- <br>
+                    <input type="text" id="max" placeholder="₹ MAX">
+                    <button style="border: 1px solid;">GO</button>
+                </form> <br>
+                <h6>Deals & Discounts</h6>
+                    <p>All Discounts</p>
+                <h6>Cell Phone Brands</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Top Brands</a></label><br>
+                </form><br>
+                <h6>Operating System</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Android OS</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Oxygen OS</a></label>
+                </form><br>
+                <h6>Cellular Phone Memory <br>Storage Capacity</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">64 GB</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">128 GB</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">256 GB</a></label>
+                </form><br>
+                <h6>Pay On Delivery</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Pay on Delivery</a></label><br>
+                </form><br>
+                <h6>Item Weight</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">142 to 197.9 g</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">198 to 254.9 g</a></label><br>
+                </form><br>
+                <h6>Screen Size</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">5.5 in & above</a></label><br>
+                </form><br>
+                <h6>Processor Speed</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href=""> 2 - 2.4 GHz</a></label><br>
+                </form><br>
+                <h6>Battery Capacity</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href=""> Up to 2,999 mAh</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href=""> 5,000 to 5,999 mAh</a></label><br>
+                </form><br>
+                <h6>Form Factor</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Bar</a></label><br>
+                </form><br>
+                <h6>Sim Card Size</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Nano</a></label><br>
+                </form><br>
+                <h6>Mobile Phone Connectivity Technology</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href=""> Bluetooth</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href=""> USB</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href=""> Wi-Fi</a></label><br>
+                </form><br>
+                <h6>Display Type</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">  AMOLED</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">LCD</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href=""> Full HD</a></label><br>
+                </form><br>
+                <h6>Included Components</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Phone Case</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Power Adapter</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">SIM Tray Ejector</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">USB Cable</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Screen Protector</a></label><br>
+                </form><br>
+                <h6>Mobile Phone Shooting Modes</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Aperture Priority</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Automatic</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">High Dynamic Range</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Macro</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">Screen Protector</a></label><br>
+                </form><br>
+                <h6>Discounts</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">10% Off or more</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">25% Off or more</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">35% Off or more</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">50% Off or more</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">60% Off or more</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">70% Off or more</a></label><br>
+                </form><br>
+                <h6>Cellular Technology</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">  2G</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">3G</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">4G</a></label><br>
+                    <input type="checkbox">
+                    <label for=""> <a href="">5G</a></label><br>
+                </form><br>
+                <h6>Availability</h6>
+                <form action="" id="form">
+                    <input type="checkbox">
+                    <label for=""> <a href="">Include Out of Stock</a></label><br>
+                </form><br>
+                </div>
+                
+            </div>
+            <div class="col-sm-9 mt-5" >
+                <h3>Result</h3>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                 <button id="btn"></button>
+                 <button id="btn1"></button>
+                 <button id="btn2"></button>
+                 <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button> 
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button>
+                </div>
+             </div>
+                <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href=""><img src="../img/apple-iphone-13-pro-max-01.jpg" class="img-fluid" width="300px" height="00px"></a>
+                </div>                     
+                <div class="col-sm-9 mx-auto" style="padding-left: 100px;">
+                    <p class="text-decoration">Sponsored</p>
+                   <h2><b>Apple</b></h2> 
+                   <p style="font-size: larger;">iPhone 13 (128GB) - Pink</p>
+                   <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i><a href="" style="padding-left:10px ;">21,435</a>
+                </div>
+                <p>5K+ bought in past month</p>
+                <p><h1>₹52,999 </h1>M.R.P:<span style="text-decoration: line-through;"> ₹69,900 </span> (24% off)
+                   <br> Save extra with No Cost EMISave extra with No Cost EMI</p>
+                   <p> Get it by Friday, <span style="font-weight:bold;">15 December
+                    FREE Delivery</span> by TEKNODO</p>
+                    <button id="btn"></button>
+                    <button id="btn1"></button>
+                    <button id="btn2"></button>
+                    <button id="btn3"></button><br><br><br><br><br>
+                    <nav aria-label="Page navigation example text-center">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                </div>
+              <div class="container align-items-center">
+                <h3>Related Search</h3><br>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left;margin-left: 30px; "><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp; <a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left; margin-left: 30px;"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left; margin-left: 30px;"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp; <a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left; margin-left: 30px;"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp; <a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left; margin-left: 30px;"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp; <a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+                <p style="background-color: rgb(255, 255, 255); border: 1px solid; width: 300px; height: 50px; padding: 10px; float: left; margin-left: 30px;"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="padding-left:10px ;text-decoration: none; color: black;">iphone</a></p>
+              </div>
+             </div> <br><br><br>
+             <h3> Need help?</h3>
+               <p> <a href="">Visit the help section </a>or <a href="">contact us </a></p>
+               
+             </div>
+             
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br><br>
+    <h2 class="text-dark"style="padding:20px;margin-left:10px;">Today's Deal</h2>
+  <div class="container-well">
+    <ul class="cards">
+      <li class="card">
+        <div class="img">
+          <h3>Redmi Series</h3>        
+        <a href=""> <img src="./img/xiaomi-redmi-12-1.jpg" width="150px" height="150px"></a>
+        <a href="">   <img src="./img/xiaomi-redmi-note-12-pro-4g-1.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/xiaomi-redmi-note-12s-11.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/xiaomi-redmi-note10-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <h3>Poco Series</h3>       
+          <a href=""> <img src="./img/xiaomi-poco-f5-2.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/xiaomi-poco-x5-pro-5g-1.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/xiaomi-13t-1.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/xiaomi-poco-x3-pro-1.jpg" href="#"width="170px" height="150px"></a> 
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <h3>Smart Watch</h3>
+          <a href=""> <img src="./img/watch1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/watch2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/watch3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/watch4.jpg" href="#"width="170px" height="150px"></a> 
+         
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>Air Buds</h3>
+        <div class="img">
+          <a href=""> <img src="./img/buds1.jpg" width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/buds2.jpg" href="#"width="170px" height="150px"></a> 
+          <a href="">   <img src="./img/buds3.jpg" href="#"width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/ds4.jpg" href="#"width="170px" height="150px"></a> 
+           
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3 > Laptop</h3>
+        <div class="img">
+          <a href=""> <img src="./img/lap1.jpg" width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/lap2.jpg" href="#"width="170px" height="150px"></a> 
+          <a href="">   <img src="./img/lap3.jpg" href="#"width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/lap4.jpg" href="#"width="170px" height="150px"></a> 
+           
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>Mouse</h3>
+        <div class="img">
+          <a href=""> <img src="./img/download.jpg" width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/mouse1.jpg" href="#"width="170px" height="150px"></a> 
+          <a href="">   <img src="./img/mouse2.jpg" href="#"width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/mouse3.jpg" href="#"width="170px" height="150px"></a> 
+           
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>Pendrive</h3>
+        <div class="img">
+          <a href=""> <img src="./img/pen1.jpg" width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/pen2.jpg" href="#"width="170px" height="150px"></a> 
+          <a href="">   <img src="./img/pen3.jpg" href="#"width="150px" height="150px"></a> 
+          <a href="">   <img src="./img/pen4.jpg" href="#"width="170px" height="150px"></a> 
+           
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>cables</h3>
+        <div class="img">
+          
+          <a href=""> <img src="./img/cable1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/cable2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/cable3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/cable4.jpg" href="#"width="170px" height="150px"></a> 
+         
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>Keyboard</h3>
+        <div class="img">
+          
+          <a href=""> <img src="./img/key1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/key2.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/key3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/key4.jpg" href="#"width="170px" height="150px"></a> 
+         
+        </div>
+        <div class="card-link-wrapper">
+          <a href="" class="card-link">Learn More</a>
+        </div>
+      </li>
+      <li class="card">
+        <h3>Smart TV</h3>
+        <div class="img">
+          
+          <a href=""> <img src="./img/tv1.jpg" width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/tv2'.jpg" href="#"width="170px" height="150px"></a> 
+        <a href="">   <img src="./img/tv3.jpg" href="#"width="150px" height="150px"></a> 
+        <a href="">   <img src="./img/tv4.jpg" href="#"width="170px" height="150px"></a> 
+         
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <footer class="new_footer_area bg-dark">
+    <div class="new_footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                        <p>Don’t miss any updates of our new templates and extensions.!</p>
+                        <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                            <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                            <button class="btn btn_get btn_get_two text-primary" type="submit">Subscribe</button>
+                            <p class="mchimp-errmessage" style="display: none;"></p>
+                            <p class="mchimp-sucmessage" style="display: none;"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Android App</a></li>
+                            <li><a href="#">ios App</a></li>
+                            <li><a href="#">Desktop</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">My tasks</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft text-white" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Term &amp; conditions</a></li>
+                            <li><a href="#">Reporting</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Policy</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                        <div class="f_social_icon">
+                            <a href="#" class="fab fa-facebook"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                            <a href="#" class="fab fa-pinterest"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
+ 
